@@ -1,7 +1,7 @@
 import React from "react";
 import Tab from "./Tab";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const Tabs = props => {
   return (
@@ -9,15 +9,15 @@ const Tabs = props => {
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
         {/* map over the tabs provided on your props, create a new Tab component for each one.
-            give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/
-        props.tabs.map((tab, index) => {
+            give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
+        {props.tabs.map((tab, index) => (
           <Tab
             key={index}
             tab={tab}
             selectTabHandler={props.selectTabHandler}
             selectedTab={props.selectedTab}
-          />;
-        })}
+          />
+        ))}
       </div>
     </div>
   );
@@ -29,5 +29,5 @@ export default Tabs;
 Tabs.propTypes = {
   selectedTab: PropTypes.string,
   tabs: PropTypes.arrayOf(PropTypes.string),
-  selectTabHandler: PropTypes.func,
-} 
+  selectTabHandler: PropTypes.func
+};
