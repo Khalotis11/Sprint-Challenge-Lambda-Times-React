@@ -51,12 +51,13 @@ const ContainerCenter = styled.div`
   align-items: center;
   flex-direction: row;
   flex: 3;
-  font-size: 9px;
+  font-size: 11px;
 `;
 
 const CenterSpan = styled.span`
   cursor: pointer;
   margin-right: 5%;
+  font-weight: bold;
   &:hover {
     text-decoration: underline;
   }
